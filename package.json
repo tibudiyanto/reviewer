@@ -12,6 +12,7 @@
   "dependencies": {
     "@opentui/core": "^0.1.24",
     "@opentui/react": "^0.1.24",
-    "react": "^19.1.1"
+    "react": "^19.1.1",
+    "simple-git": "^3.28.0"
   }
 }

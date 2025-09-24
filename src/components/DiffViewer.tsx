@@ -67,13 +67,15 @@ export function DiffViewer({ file, focused = false, scrollOffset = 0 }: DiffView
         {file.path}
       </text>
       
-      {file.hunks.length === 0 ? (
-        <text attributes={TextAttributes.DIM}>
-          No changes to display
-        </text>
-      ) : (
-        file.hunks.map((hunk, hunkIndex) => renderHunk(hunk, hunkIndex))
-      )}
+      <scrollbox focused={focused} style={{ flexGrow: 1, width: "100%" }}>
+        {file.hunks.length === 0 ? (
+          <text attributes={TextAttributes.DIM}>
+            No changes to display
+          </text>
+        ) : (
+          file.hunks.map((hunk, hunkIndex) => renderHunk(hunk, hunkIndex))
+        )}
+      </scrollbox>
     </box>
   );
 }
